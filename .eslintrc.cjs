@@ -22,7 +22,12 @@ module.exports = {
     "import/extensions": 0,
     "import/no-extraneous-dependencies": [
       "error",
-      { devDependencies: ["**/*.test.ts"] },
+      {
+        devDependencies: [
+          "**/scripts/**",
+          "**/*.test.ts"
+        ],
+      },
     ],
     "import/no-unresolved": 0,
     "import/prefer-default-export": 0,

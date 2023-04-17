@@ -1,4 +1,4 @@
-# langchain-ts-starter
+# [langchain-ts-starter](https://github.com/domeccleston/langchain-ts-starter)
 
 Boilerplate to get started quickly with the [Langchain Typescript SDK](https://github.com/hwchase17/langchainjs).
 
@@ -15,7 +15,14 @@ This uses the same tsconfig and build setup as the [examples repo](https://githu
 # How to use
 
 - Clone this repository
-- `npm install`
+- `yarn`
+- `cp .env.example .env` and provide all values
 - Write your code in `src`
-- `npx turbo run build lint format` to run build scripts quickly in parallel
-- `npm start` to run your program
+- `yarn start` to run your program
+- `yarn test` to test
+
+# ingest
+
+This doesnt need to be done unless you're creating/replacing the embedding data in supabase. Supabase was one time set up like described in the langchain documentation.
+
+- `yarn ingest` to ingest data into vector store
