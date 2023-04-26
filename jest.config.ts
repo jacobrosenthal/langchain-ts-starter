@@ -6,6 +6,13 @@ const config: Config.InitialOptions = {
   modulePathIgnorePatterns: ["dist/"],
   setupFiles: ["dotenv/config"],
   testTimeout: 20_000,
+  moduleNameMapper: {
+    "^(\\.{1,2}/.*)\\.js$": "$1",
+    uuid: require.resolve("uuid"),
+  },
+  transform: {
+    "^.+\\.m?[tj]sx?$": ["ts-jest", { useESM: true }],
+  },
 };
 
 export default config;
